@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    font-family: 'Nunito Sans', sans-serif;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-container {
+    background-color: #f9f5f2;
+    width: 90%;
+    max-width: 1400px;
+    min-height: 85vh;
+    margin: 3% 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.navbar img {
+    width: 120px;
+}
+
+
+.input-and-btn {
+    display: flex;
+    width: 70%;
+    max-width: 600px;
+}
+
+.input-and-btn input {
+    flex: 1;
+    height: 50px;
+    border: none;
+    border-radius: 10rem 0 0 10rem;
+    padding: 0 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-and-btn button {
+    border: none;
+    padding: 0 30px;
+    border-radius: 0 10rem 10rem 0;
+    background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.input-and-btn button:hover {
+    transform: scale(1.05);
+}
+
+
+
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 70vh;
+}
+
+
+.left-br {
+    width: 32%;
+    background: white;
+    overflow-y: auto;
+}
+
+.data {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.data:hover {
+    background-color: #f9f5f3;
+    border-right: 1px solid white;
+}
+
+.data img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.textDiv h2 {
+    font-size: 14px;
+    color: #f38e82;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+
+.textDiv p {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.data span {
+    display: none;
+}
+
+
+
+.right-br {
+    width: 68%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-br>p {
+    font-size: 18px;
+    opacity: 0.8;
+    margin: 100px auto;
+    width: 80%;
+    text-align: center;
+}
+
+
+.img-div {
+    position: relative;
+    width: 100%;
+}
+
+.img-div img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.img-div h1 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-5deg);
+    background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+}
+
+
+.timeAndServingsDiv {
+    display: flex;
+    gap: 40px;
+    padding: 40px 20px;
+    font-size: 16px;
+}
+
+
+
+.recipeIngredientsDiv {
+    width: 100%;
+    background-color: #f2efee;
+    padding: 70px 30px;
+    text-align: center;
+    position: relative;
+}
+
+.recipeIngredientsDiv h2 {
+    color: #f38e82;
+    padding-bottom: 100px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.recipeIngredientsDiv ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.recipeIngredientsDiv li {
+    font-size: 14px;
+    text-align: left;
+}
+
+.recipeIngredientsDiv i {
+    color: #f38e82;
+    margin-right: 8px;
+}
+
+
+@media (max-width: 900px) {
+    .input-and-btn {
+        width: 100%;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .left-br,
+    .right-br {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        padding: 20px;
+    }
+
+    .input-and-btn {
+        flex-direction: column;
+    }
+
+    .input-and-btn input,
+    .input-and-btn button {
+        width: 100%;
+        border-radius: 10rem;
+        padding: 20px;
+    }
+
+    .input-and-btn button {
+        margin-top: 10px;
+    }
+}

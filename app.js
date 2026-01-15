@@ -11,6 +11,7 @@ input.addEventListener('keypress', (e) => {
 });
 
 async function getCompleteData() {
+    completeDataContainer.innerHTML = ''
     let completeData = await CompleteDataFetch();
 
     let { data: { recipes: [...totalData] } } = completeData
